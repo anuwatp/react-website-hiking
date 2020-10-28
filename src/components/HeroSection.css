@@ -1,0 +1,103 @@
+.hero-container {
+  background: url('/images/camping.svg') center no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.hero-container > h1 {
+  color: #fff;
+  font-size: 100px;
+  margin-top: -100px;
+}
+
+.hero-container > p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 32px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.hero-btns {
+  margin-top: 32px;
+}
+
+.hero-btns .btn {
+  margin: 6px;
+}
+
+.hero-btns a,
+.navbar button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fa-play-circle {
+  margin-left: 4px;
+}
+
+.modal-video-close-btn {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-video-close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Fallback stuff */
+progress[value] {
+  appearance: none; /* Needed for Safari */
+  border: none; /* Needed for Firefox */
+  color: #e52e71; /* Fallback to a solid color */
+}
+
+/* WebKit styles */
+progress[value]::-webkit-progress-value {
+  background-image: linear-gradient(
+    to right,
+    #ff8a00, #e52e71
+  );
+  transition: width 1s linear;
+}
+
+/* Firefox styles */
+progress[value]::-moz-progress-bar {
+  background-image: -moz-linear-gradient(
+    right,
+    #ff8a00, #e52e71
+  );
+}
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+
+  .hero-container > p {
+    font-size: 30px;
+  }
+
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
