@@ -55,8 +55,8 @@ function Besseggen() {
 
             // About
             aboutLocation='Jotunheimen'
-            difficultyColor='blue'
-            aboutDifficulty='Easy'
+            difficultyColor='red'
+            aboutDifficulty='More demanding'
             aboutType='Foot'
             aboutOneway='16.8 km'
             aboutDuration='6-8 hours'
