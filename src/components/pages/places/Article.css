@@ -21,6 +21,16 @@
 }
 
 .article__container img {border-radius: 0.5rem;}
+.article__container a {color: rgb(26, 26, 26);}
+
+.article__container figcaption {
+    text-align: center;
+}
+
+.article__figcaption__on {
+    text-decoration: none;
+    display: inline-block;
+}
 
 /* Article header */
 .article__header__title,
@@ -43,7 +53,7 @@
 
 /* Article about */
 .green {color: green;}/* Difficulty very easy */
-.blue {color: blue;}/* Difficulty easy */
+.blue {color: #4b8ed8;}/* Difficulty easy */
 .red {color: red;}/* Difficulty more demanding */
 .black {color: black;}/* Difficulty demanding */
 
@@ -93,14 +103,16 @@
 }
 
 /* Article season */
-.article__season__info p {margin-bottom: 1rem;}
+.article__season__info p,
+.article__route p {margin-bottom: 1rem;}
 
 /* Article equiptment */
 .article__equipment__container {display: flex;}
 
 .article__equipment__right-column {
     display: flex; 
-    flex-shrink: 1.1;
+    flex-direction: column;
+    flex-shrink: 1.3;
 }
 
 .article__equipment__right-column img {

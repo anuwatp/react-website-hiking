@@ -23,14 +23,13 @@ function Article(props) {
                                 Photo by&nbsp;
                         {/^https?:\/\//.test(props.authorPath)
                                     ? <a target='_blank' href={props.authorPath}>
-                                        {props.author}&nbsp;
+                                        {props.author}<span className='article__figcaption__on'>&nbsp;on</span>
                                 </a>
                                     : <Link to={props.authorPath}>
                                     </Link>
                                 }
-                        on
 
-                        {/^https?:\/\//.test(props.sourcePath)
+                                {/^https?:\/\//.test(props.sourcePath)
                                     ? <a target='_blank' href={props.sourcePath}>
                                         &nbsp;{props.source}
                                     </a>
@@ -52,17 +51,17 @@ function Article(props) {
                                     </div>
                                 </li>
                                 <li>
-                                    <div className='article__about__key'>Difficulty:</div>
-                                    <div className='article__about__value'>
-                                        <i className={`fas fa-circle ${props.difficultyColor}`}></i>
-                                        {props.aboutDifficulty}
-                                    </div>
-                                </li>
-                                <li>
                                     <div className='article__about__key'>Type:</div>
                                     <div className='article__about__value'>
                                         <i className="fas fa-hiking"></i>
                                         {props.aboutType}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className='article__about__key'>Difficulty:</div>
+                                    <div className='article__about__value'>
+                                        <i className={`fas fa-circle ${props.difficultyColor}`}></i>
+                                        {props.aboutDifficulty}
                                     </div>
                                 </li>
                                 <li>
@@ -108,12 +107,13 @@ function Article(props) {
                             Photo by&nbsp;
                         {/^https?:\/\//.test(props.centerImageAuthorPath)
                                 ? <a target='_blank' href={props.centerImageAuthorPath}>
-                                    {props.centerImageAuthor}
+                                    {props.centerImageAuthor}<span className='article__figcaption__on'>&nbsp;on</span>
                                 </a>
                                 : <span>{props.centerImageAuthor}</span>}
+
                             {/^https?:\/\//.test(props.centerImageSourcePath)
                                 ? <a target='_blank' href={props.centerImageSourcePath}>
-                                    {props.centerImageSource}
+                                    &nbsp;{props.centerImageSource}
                                 </a>
                                 : <Link to={props.centerImageSourcePath}>
                                 </Link>
@@ -121,7 +121,7 @@ function Article(props) {
                         </figcaption>
                     </figure>
                     <section className='article__season'>
-                        <h2>When to go</h2>
+                        <h2>{props.seasonTitle}</h2>
                         <div className='article__season__info'>{props.seasonInfo}</div>
                     </section>
                     <section className='article__equipment'>
@@ -130,9 +130,12 @@ function Article(props) {
                             <div className='article__equipment__left-column'>
                                 <div className='article__equipment__info'>{props.equipmentInfo}</div>
                             </div>
-                            <div className='article__equipment__right-column'>
+                            <figure className='article__equipment__right-column'>
                                 <img src='../images/equipment.jpg' />
-                            </div>
+                                <figcaption>
+                                    <a href='https://www.freepik.com/vectors/snow'>Snow vector created by pch.vector - www.freepik.com</a>
+                                </figcaption>
+                            </figure>
                         </div>
                     </section>
                 </div>

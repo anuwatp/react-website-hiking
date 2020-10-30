@@ -21,7 +21,7 @@ function Cards() {
               title='Besseggen'
               text="Besseggen is considered to be Norway's clearest lake. "
               label='More demanding'
-              path='/places-to-go'
+              path='/places-to-go/besseggen'
               />
           </ul>
           <ul className='cards__items'>
@@ -30,21 +30,21 @@ function Cards() {
               title='Ryten'
               text='View from the mountain Ryten is second to none, with the long, golden beach far below.'
               label='Easy'
-              path='/places-to-go'
+              path='/places-to-go/ryten'
               />
             <CardItem
               src='images/kjerag.jpg'
               text='Beautiful view of the Lysefjord from the plateau.'
               title='Kjerag'
               label='More demanding'
-              path='/places-to-go'
+              path='/places-to-go/kjerag'
               />
             <CardItem
               src='images/preikestolen.jpg'
               title='Preikestolen'
               text='One of the country’s most spectacular photo subjects.'
               label='Easy'
-              path='/places-to-go'
+              path='/places-to-go/preikestolen'
             />
           </ul>
         </div>
