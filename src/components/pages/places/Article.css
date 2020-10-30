@@ -1,0 +1,114 @@
+.article__container {
+    padding: 4rem 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.article__container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.article__container p {white-space: pre-line;}
+
+.article__container section {
+    padding: 3rem 0 0 0; 
+    width:100%;
+}
+
+.article__container img {border-radius: 0.5rem;}
+
+/* Article header */
+.article__header__title,
+.article__header__location {text-align: center;}
+
+.article__header__title {font-size: 4rem;}
+
+.article__header__location i {
+    margin-right: 0.3rem;
+    color: green;
+}
+
+.article__header__pic-wrap {
+    position: relative;
+    width: 100%;
+    margin: 1.5rem auto 0;
+}
+
+.article__header__img{width: 100%;}
+
+/* Article about */
+.green {color: green;}/* Difficulty very easy */
+.blue {color: blue;}/* Difficulty easy */
+.red {color: red;}/* Difficulty more demanding */
+.black {color: black;}/* Difficulty demanding */
+
+.article__about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article__about__info-list {
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 2.5;
+}
+
+.article__about__info-list li {
+    display: flex;
+    border-bottom: 1px solid #dadada    ;
+    padding-right: 24rem;
+}
+
+.article__about__info-list li .article__about__key {font-weight: bold;}
+
+.article__about__info-list li .article__about__value {
+    position: absolute;
+    margin-left: 14rem;
+}
+
+.article__about__info-list li .article__about__value i {margin-right: 1rem;}
+
+.article__about__map {
+    background: red;
+    color: white;
+    font-size: 3rem;
+    padding: 8rem 10rem;
+}
+
+/* Center image */
+.article__center__pic-wrap {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.article__center__image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 30rem;
+}
+
+/* Article season */
+.article__season__info p {margin-bottom: 1rem;}
+
+/* Article equiptment */
+.article__equipment__container {display: flex;}
+
+.article__equipment__right-column {
+    display: flex; 
+    flex-shrink: 1.1;
+}
+
+.article__equipment__right-column img {
+    object-fit: contain;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .article__container {padding: 2rem;}    
+    .article__header__pic-wrap {width: 100%;}
+}

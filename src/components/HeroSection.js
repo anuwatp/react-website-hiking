@@ -31,7 +31,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={() => setOpen(true)}
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          WATCH VIDEO <i className='far fa-play-circle' />
         </Button>
       </div>
     </div >

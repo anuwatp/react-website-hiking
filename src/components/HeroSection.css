@@ -24,13 +24,9 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-.hero-btns {
-  margin-top: 32px;
-}
+.hero-btns {margin-top: 32px;}
 
-.hero-btns .btn {
-  margin: 6px;
-}
+.hero-btns .btn {margin: 6px;}
 
 .hero-btns a,
 .navbar button a {
@@ -38,18 +34,14 @@
   text-decoration: none;
 }
 
-.fa-play-circle {
-  margin-left: 4px;
-}
+.fa-play-circle {margin-left: 4px;}
 
 .modal-video-close-btn {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-.modal-video-close-btn:hover {
-  transform: scale(1.2);
-}
+.modal-video-close-btn:hover {transform: scale(1.2);}
 
 /* Fallback stuff */
 progress[value] {
@@ -88,16 +80,12 @@ progress[value]::-moz-progress-bar {
     margin-top: -100px;
   }
 
-  .hero-container > p {
-    font-size: 30px;
-  }
+  .hero-container > p {font-size: 30px;}
 
   .btn-mobile {
     display: block;
     text-decoration: none;
   }
 
-  .btn {
-    width: 100%;
-  }
+  .btn {width: 100%;}
 }

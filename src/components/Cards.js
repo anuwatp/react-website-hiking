@@ -14,7 +14,7 @@ function Cards() {
               title='Trolltunga'
               text='The most spectacular rock formation in Norway.'
               label='Demanding'
-              path='/places-to-go'
+              path='/places-to-go/trolltunga'
               />
             <CardItem
               src='images/besseggen.jpg'
