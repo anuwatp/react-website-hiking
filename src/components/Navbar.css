@@ -61,6 +61,13 @@
   transition: all 0.2s ease-out;
 }
 
+.disabled {
+  color: gray;
+}
+.disabled:hover {
+  border-bottom: none;
+}
+
 .fa-bars {color: #fff;}
 
 .nav-links-mobile {display: none;}
@@ -84,6 +91,7 @@
 
   .nav-menu.active {
     background: #242222;
+    justify-content: start;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
