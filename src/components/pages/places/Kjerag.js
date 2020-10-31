@@ -1,8 +1,19 @@
 import React from 'react';
 import './Article.css';
 import Article from './Article';
+import { MyMapComponent } from '../../GoogleMaps';
 
 function Kjerag() {
+    const map =
+    <MyMapComponent
+        isMarkerShown
+        showLocation={{ lat: 59.035067, lng: 6.577522 }}
+        markerLocation={{ lat: 59.035067, lng: 6.577522 }}
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+    />
     const descriptionInfo = <>
         {`The Majesty of the Lysefjord, in Ryfylke. At 1084 metres, Kjerag towers above the other peaks along the Lysefjord. NB! Do not hike to Kjerag in the winter! Go with a nature guide off season.
         
@@ -62,7 +73,7 @@ function Kjerag() {
             aboutOneway='4.5 km'
             aboutDuration='3-6 hours'
             aboutSeason='Jun - Oct'
-            aboutMap='google map'
+            aboutMap={map}
 
             // Description
             descriptionTitle="Beautiful view of the Lysefjord from the plateau"

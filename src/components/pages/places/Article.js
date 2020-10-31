@@ -16,13 +16,13 @@ function Article(props) {
                         <figure className='article__header__pic-wrap'>
                             <img
                                 className='article__header__img'
-                                alt='Travel Image'
+                                alt='View from the top of the mountain'
                                 src={props.headerImage}
                             />
                             <figcaption>
                                 Photo by&nbsp;
                         {/^https?:\/\//.test(props.authorPath)
-                                    ? <a target='_blank' href={props.authorPath}>
+                                    ? <a target='_blank' rel='noopener noreferrer' href={props.authorPath}>
                                         {props.author}<span className='article__figcaption__on'>&nbsp;on</span>
                                 </a>
                                     : <Link to={props.authorPath}>
@@ -30,7 +30,7 @@ function Article(props) {
                                 }
 
                                 {/^https?:\/\//.test(props.sourcePath)
-                                    ? <a target='_blank' href={props.sourcePath}>
+                                    ? <a target='_blank' rel='noopener noreferrer' href={props.sourcePath}>
                                         &nbsp;{props.source}
                                     </a>
                                     : <Link to={props.sourcePath}>
@@ -102,17 +102,18 @@ function Article(props) {
                     <figure className='article__center__pic-wrap'>
                         <img className='article__center__image'
                             src={props.centerImage}
+                            alt='Beautiful mountain'
                         />
                         <figcaption>
                             Photo by&nbsp;
                         {/^https?:\/\//.test(props.centerImageAuthorPath)
-                                ? <a target='_blank' href={props.centerImageAuthorPath}>
+                                ? <a target='_blank' rel='noopener noreferrer' href={props.centerImageAuthorPath}>
                                     {props.centerImageAuthor}<span className='article__figcaption__on'>&nbsp;on</span>
                                 </a>
                                 : <span>{props.centerImageAuthor}</span>}
 
                             {/^https?:\/\//.test(props.centerImageSourcePath)
-                                ? <a target='_blank' href={props.centerImageSourcePath}>
+                                ? <a target='_blank' rel='noopener noreferrer' href={props.centerImageSourcePath}>
                                     &nbsp;{props.centerImageSource}
                                 </a>
                                 : <Link to={props.centerImageSourcePath}>
@@ -131,9 +132,9 @@ function Article(props) {
                                 <div className='article__equipment__info'>{props.equipmentInfo}</div>
                             </div>
                             <figure className='article__equipment__right-column'>
-                                <img src='../images/equipment.jpg' />
+                                <img alt='hiking figure' src='../images/equipment.jpg' />
                                 <figcaption>
-                                    <a href='https://www.freepik.com/vectors/snow'>Snow vector created by pch.vector - www.freepik.com</a>
+                                    <a rel='noopener noreferrer' href='https://www.freepik.com/vectors/snow'>Snow vector created by pch.vector - www.freepik.com</a>
                                 </figcaption>
                             </figure>
                         </div>

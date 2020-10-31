@@ -1,8 +1,19 @@
 import React from 'react';
 import './Article.css';
 import Article from './Article';
+import { MyMapComponent } from '../../GoogleMaps';
 
 function Ryten() {
+    const map =
+        <MyMapComponent
+            isMarkerShown
+            showLocation={{ lat: 68.088014, lng: 13.091988 }}
+            markerLocation={{ lat: 68.088014, lng: 13.091988 }}
+            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `400px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+        />
     const descriptionInfo = <>
         {`Ryten rises 542 meters above sea level, and has panoramic views of the beautiful Kvalvika beach and beyond the ocean! Here you get to experience real Lofoten idyll with steep mountains, emerald green sea and an impressive sandy beach that tempts the bathing lions into the waves.
         
@@ -10,13 +21,11 @@ function Ryten() {
 
         This is a relatively easy hike suitable for families who enjoy hiking in the mountains. There are several variations on the trip, so you can adjust the length to your liking.`}
     </>;
-
     const routeInfo = <>
         {`Drive to the end of the valley about 500m. After the selected official trail starts. Walk across the fields on good dry trails. Then you go steeply up the hill. Then a little more gentle landscape and you can choose to take a detour around a cottage. Then you go a little further and you come to a lake where you can see the top up a long hill. If you go straight along the water and towards the sea, you arrive at Kvalvika. There you can go for a nice round after you have reached Ryten.
 
         Continue to Ryten where there is a magical view. There is a rock that is suitable to hang in to take a few dramatic pictures or to sit on. Be careful!`}
     </>;
-
     const equipmentInfo = <>
         <h3>Backpack</h3>
         <p>
@@ -46,14 +55,14 @@ function Ryten() {
             source='Unsplash'
 
             // About
-            aboutLocation='Lofoten, Vesterålen og Hinnøya'
+            aboutLocation='Lofoten'
             difficultyColor='blue'
             aboutDifficulty='Easy'
             aboutType='Foot'
             aboutOneway='5.7 km'
             aboutDuration='2 hours'
             aboutSeason='All year round'
-            aboutMap='google map'
+            aboutMap={map}
 
             // Description
             descriptionTitle='Beautiful panoramic views of Kalvika beach from Ryten'

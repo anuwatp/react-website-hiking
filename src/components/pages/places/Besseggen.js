@@ -1,8 +1,19 @@
 import React from 'react';
 import './Article.css';
 import Article from './Article';
+import { MyMapComponent } from '../../GoogleMaps';
 
 function Besseggen() {
+    const map =
+    <MyMapComponent
+        isMarkerShown
+        showLocation={{ lat: 61.505891, lng: 8.755571 }}
+        markerLocation={{ lat: 61.505891, lng: 8.755571 }}
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+    />
     const descriptionInfo = <>
         {`Some would argue that it is a must-do hike for all Norwegians. An estimated 60,000 people walk the Besseggen ridge every year. The green waters of the Gjende lake, cradled amidst the steep mountains of the majestic Jotunheimen National Park, create the perfect scenery. Bessvatnet lake, on the opposite side of the ridge, is considered to be Norway's clearest lake, where you can see as far as 30 meters below the surface of the water.`}
     </>;
@@ -61,7 +72,7 @@ function Besseggen() {
             aboutOneway='16.8 km'
             aboutDuration='6-8 hours'
             aboutSeason='Jun - Sep'
-            aboutMap='google map'
+            aboutMap={map}
 
             // Description
             descriptionTitle="Besseggen is considered to be Norway's clearest lake"

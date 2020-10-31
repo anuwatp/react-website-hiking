@@ -1,8 +1,19 @@
 import React from 'react';
 import './Article.css';
 import Article from './Article';
+import { MyMapComponent } from '../../GoogleMaps';
 
 function Preikestolen() {
+    const map =
+    <MyMapComponent
+        isMarkerShown
+        showLocation={{ lat: 58.986495, lng: 6.190443 }}
+        markerLocation={{ lat: 58.986495, lng: 6.190443 }}
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+    />
     const descriptionInfo = <>
         {`Preikestolen is one of Rogaland county’s most visited attractions, and one of the country’s most spectacular photo subjects. Preikestolen has been named one of the world’s most spectacular viewing points by both CNN Go and Lonely Planet. It rises 604 metres above the Lysefjord. 
 
@@ -56,7 +67,7 @@ function Preikestolen() {
             aboutOneway='3.9 km'
             aboutDuration='2.5 hours'
             aboutSeason='All year round'
-            aboutMap='google map'
+            aboutMap={map}
 
             // Description
             descriptionTitle="Preikestolen the most famous tourist attraction in Ryfylke"

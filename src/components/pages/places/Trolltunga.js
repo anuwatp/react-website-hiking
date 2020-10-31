@@ -1,15 +1,26 @@
 import React from 'react';
 import './Article.css';
 import Article from './Article';
+import { MyMapComponent } from '../../GoogleMaps';
 
 function Trolltunga() {
+
+    const map =
+        <MyMapComponent
+            isMarkerShown
+            showLocation={{ lat: 60.124466, lng: 6.739957 }}
+            markerLocation={{ lat: 60.124466, lng: 6.739957 }}
+            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `400px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+        />
     const descriptionInfo = <>
         {`Trolltunga is one of the most scenic and spectacular cliffs in Norway, hovering 700 metres above Ringedalsvatnet lake. Situated at the western edge of the Hardangervidda plateau, near the town of Odda, Trolltunga was carved by the icecap that once covered most of Scandinavia.
 
         The hike through high-mountain terrain up to Trolltunga (1180 m) is long and demanding, but you are rewarded with magnificent views.
         Hikers need to be properly equipped and in good shape.`}
     </>;
-
     const routeInfo = <>
         {`There are three car parks in the area: Tyssedal, Skjeggedal, and Mågelitopp. Note that there is a limited number of parking spaces.
 
@@ -19,7 +30,6 @@ function Trolltunga() {
 
             There is an additional trailhead at P3 Mågelitopp. The round-trip hike from P3 Mågelitopp is 20 km with an ascent of about 320 metres. The estimated hiking time is 7–10 hours.`}
     </>;
-
     const seasonInfo = <>
         <p>{`You can go to Trolltunga almost year round. It is always important to take weather precautions.
     
@@ -29,7 +39,6 @@ function Trolltunga() {
         
         A general good physical fitness is necessary. To avoid the loss of daylight on your return hike, you must not embark on this hike too late in the day. Get informed on the time for sunset as well as other weather conditions.`}</p>
     </>;
-
     const equipmentInfo = <>
         <h3>Backpack</h3>
         <p>
@@ -66,7 +75,7 @@ function Trolltunga() {
             aboutOneway='14.5 km'
             aboutDuration='8-12 hours'
             aboutSeason='Jun - Oct'
-            aboutMap='google map'
+            aboutMap={map}
 
             // Description
             descriptionTitle="Norway's most spectacular rock formation"
