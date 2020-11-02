@@ -20,7 +20,7 @@
     width:100%;
 }
 
-.article__container img {border-radius: 0.5rem;}
+.article__container img {border-radius: 5px;}
 .article__container a {color: rgb(26, 26, 26);}
 
 .article__container figcaption {
