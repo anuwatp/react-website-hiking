@@ -19,7 +19,7 @@ hr {
 
 .review__comment__header {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .review__comment__header-author {

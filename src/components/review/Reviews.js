@@ -1,25 +1,51 @@
 import React, { useState } from 'react';
 import './Reviews.css';
-import AddReview from './AddReview';
+import AddReview, { TimeStamp } from './AddReview';
 
 function Reviews() {
-    const [commentList, setCommentList] = useState([]);
     const [comment, setComment] = useState('');
+    const [reviewList, setReviewList] = useState([]);
 
-    const reviewList = commentList.map(comment =>
+    const reviewDummyData = [
+        {
+            id: 1,
+            author: 'John Doe',
+            date: TimeStamp(Date.now(), 1604500999919),
+            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+        },
+        {
+            id: 2,
+            author: 'Jane Doe',
+            date: TimeStamp(Date.now(), 1604391199919),
+            comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+        }
+    ];
+    const showDummyData = reviewDummyData.map(data =>
         <AddReview
-            author='Guest'
-            commentDate='recently'
-            comment={comment}
+            author={data.author}
+            commentDate={data.date}
+            comment={data.comment}
+        />
+    );
+
+    const showReview = reviewList.map(data =>
+        <AddReview
+            author={data.author}
+            commentDate={TimeStamp(Date.now(), data.date)}
+            comment={data.comment}
         />
     );
 
     const addReview = (e) => {
         e.preventDefault();
 
-        setCommentList(commentList => commentList.concat(comment))
+        const newReview = {
+            author: 'Guest',
+            date: Date.now(),
+            comment: comment
+        }
+        setReviewList(reviewList => [newReview, ...reviewList]);
         setComment('');
-        console.log(commentList);
     };
 
     return (
@@ -31,7 +57,7 @@ function Reviews() {
                     <form className='review__form' onSubmit={addReview}>
                         <div className='review__textarea'>
                             <label for='review'>Write a review</label>
-                            <textarea className='review__textarea__box' value={comment} onChange={e => setComment(e.target.value)}></textarea>
+                            <textarea required className='review__textarea__box' value={comment} onChange={e => setComment(e.target.value)}></textarea>
                         </div>
                         <div className='review__add__button'>
                             <input type='submit' className='btn btn--success' value='Add review' />
@@ -39,17 +65,9 @@ function Reviews() {
                     </form>
                 </div>
                 <div className='review__content'>
-                    <AddReview
-                        author='John Doe'
-                        commentDate='2 minutes ago'
-                        comment='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
-                    />
-                    <AddReview
-                        author='Jane Doe'
-                        commentDate='4 minutes ago'
-                        comment='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
-                    />
-                    {reviewList}
+                    {showReview}
+                    {/* Dummy data */}
+                    {showDummyData}
                 </div>
             </section>
         </>
