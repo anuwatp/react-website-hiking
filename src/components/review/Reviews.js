@@ -10,13 +10,13 @@ function Reviews() {
         {
             id: 1,
             author: 'John Doe',
-            date: TimeStamp(Date.now(), 1604500999919),
+            date: '2 days ago',
             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
         },
         {
             id: 2,
             author: 'Jane Doe',
-            date: TimeStamp(Date.now(), 1604391199919),
+            date: '3 days ago',
             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
         }
     ];

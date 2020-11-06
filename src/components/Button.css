@@ -19,6 +19,17 @@
   background-color: #5f864c;
 }
 
+.btn--submit {
+  background-color: #6b3dff;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn--submit:hover {
+  background-color: #5c2bff;
+}
+
 .btn--primary {
   background-color: var(--primary);
   color: #242424;
